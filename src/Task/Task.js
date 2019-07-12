@@ -20,11 +20,22 @@ class Task extends Component {
 
 
   handleAddEvent=()=>{
-    alert("Add Event Fired");
+    let tmpArr=[...this.state.counterArr,(this.state.counterArr.length+1)]
+    this.setState({
+        counterArr:tmpArr
+    },()=>{
+        console.log(this.state.counterArr)
+    })
   }
   handleRemoveEvent=()=>{   
-    alert("Remove Triggered")
-  }
+    this.state.counterArr.pop()
+    let tmpArr=this.state.counterArr
+    this.setState({
+        counterArr:tmpArr
+    },()=>{
+        console.log(this.state.counterArr)
+    })
+}
 
   render() {
     return (
