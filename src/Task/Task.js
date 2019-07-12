@@ -20,9 +20,11 @@ class Task extends Component {
 
 
   handleAddEvent=()=>{
-    let tmpArr=[...this.state.counterArr,(this.state.counterArr.length+1)]
+    let newNumber=this.state.counterArr.length+1;
+    let tmpArr=[...this.state.counterArr,newNumber]
     this.setState({
-        counterArr:tmpArr
+        counterArr:tmpArr,
+        countVal:newNumber
     },()=>{
         console.log(this.state.counterArr)
     })
