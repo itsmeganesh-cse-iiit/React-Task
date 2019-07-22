@@ -8,12 +8,14 @@ export const EventsContainer = styled.div`
   margin: auto;
   width: 50%;
   padding: 10px;
-  display: flex;
+  display: flex; 
   justify-content: center;
 `;
 export const DisplayContainer = styled.div`
   padding: 10px;
-`;
+ overflow-wrap:break-word;
+line-height:35px;
+ `;
 
 export const CountContainer = styled.div`
   padding: 10px;
